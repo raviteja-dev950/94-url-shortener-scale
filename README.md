@@ -162,57 +162,57 @@ This is Project 94 of Tier 10 - SCALE - After Rate Limited API (93), now real Sy
 # 📸 Screenshots - 11 Demos - URL Shortener Scale Verified - Live on Render
 
 ### Demo 1 – Browser - GET / - Home Live JSON - URL Shortener Scale Tier 10
-![Demo1 Home](screenshots/demo1-home.png)
+![Demo1 Home](screenshots/demo1.png)
 
 *GET http://localhost:8096/ - Browser - 200 OK - Returns {"owner":"Raviteja","endpoints":["POST /api/shorten - Body: url","GET /{shortCode} -> Redirect 302"],"github":"https://github.com/raviteja-dev950/94-url-shortener-scale","tier":"10 - System Design Level","project":"94-url-shortener-scale","message":"Try POST /api/shorten with url google.com","live":"https://nine4-url-shortener-scale.onrender.com","status":"Live - URL Shortener Scale"} - Proof of Home Live - Portfolio ready - Tier 10 SCALE 94/102*
 
 ### Demo 2 – Postman - POST /api/shorten - 200 OK - aaaaab - First Short Code
-![Demo2 Post](screenshots/demo2-post-shorten.png)
+![Demo2 Post](screenshots/demo2.png)
 
 *POST http://localhost:8096/api/shorten - Body {"url":"https://google.com"} - Postman - 200 OK Time 477ms Size 341B - Returns {"shortUrl":"https://nine4-url-shortener-scale.onrender.com/aaaaab","originalUrl":"https://google.com","message":"URL shortened successfully - Scale ready","shortCode":"aaaaab"} - Proof of Base62 Encoding Working - First short code aaaaab - Live on Render URL pattern*
 
 ### Demo 3 – Browser - GET /aaaaab - Redirect 302 to Google - Browser Bar
-![Demo3 Redirect](screenshots/demo3-redirect.png)
+![Demo3 Redirect](screenshots/demo3.png)
 
 *GET http://localhost:8096/aaaaab - Chrome address bar shows http://localhost:8096/aaaaab - Search suggestion Google - http://localhost:8096/aaaaab - Proof of 302 Redirect endpoint exists - Before Google page - Redirect logic working*
 
 ### Demo 4 – Browser - GET /stats/aaaaab - 404 Not Found - H2 In-Memory Hint - Bug Fixed
-![Demo4 Stats NotFound](screenshots/demo4-stats-notfound.png)
+![Demo4 Stats NotFound](screenshots/demo4.png)
 
 *GET http://localhost:8096/stats/aaaaab - Browser - 200 OK JSON - Returns {"hint":"H2 is in-memory - Codes deleted on restart - Create new with POST /api/shorten","searchedCode":"aaaaab","error":"Short code not found","example":"POST http://localhost:8096/api/shorten with {\"url\":\"https://google.com\"}"} - Proof of Proper Error Handling - No Whitelabel Error Page - Tier 10 Error Handling - H2 mem wipes on restart - Fixed with JSON error*
 
 ### Demo 5 – Postman - POST /api/shorten - NEW Code KldfWB - Base62 + Caffeine
-![Demo5 Post New](screenshots/demo5-post-new.png)
+![Demo5 Post New](screenshots/demo5.png)
 
 *POST http://localhost:8096/api/shorten - Body {"url":"https://google.com"} - Postman - 200 OK Time 186ms Size 457B - Returns {"shortUrl":"https://nine4-url-shortener-scale.onrender.com/KldfWB","statsUrl":"http://localhost:8096/stats/KldfWB","originalUrl":"https://google.com","message":"URL shortened successfully - Scale ready - Base62 + Caffeine Cache","shortCode":"KldfWB","localUrl":"http://localhost:8096/KldfWB"} - Proof of New Code Generation - KldfWB - Caffeine Cache Active - Scale ready message - Improved response with localUrl + statsUrl*
 
 ### Demo 6 – Browser - GET /stats/KldfWB - 200 OK - clickCount 1 - Analytics
-![Demo6 Stats Success](screenshots/demo6-stats-success.png)
+![Demo6 Stats Success](screenshots/demo6.png)
 
 *GET http://localhost:8096/stats/KldfWB - Browser - 200 OK - Returns {"createdAt":"2026-10-28T15:14:52.415513","clickCount":1,"originalUrl":"https://google.com","message":"Analytics - Click count increments on each redirect","shortCode":"KldfWB"} - Proof of Analytics Working - clickCount 1 after redirect - CreatedAt timestamp - Analytics message - Real URL shortener analytics like bit.ly*
 
 ### Demo 7 – Browser - GET /KldfWB - Google Homepage - 302 Redirect Verified
-![Demo7 Google](screenshots/demo7-google.png)
+![Demo7 Google](screenshots/demo7.png)
 
 *GET http://localhost:8096/KldfWB - Browser - Redirected to google.com/?zx=1793180743047 - Google homepage visible - Google logo + Search bar - Proof of 302 Redirect Working - Base62 decode + Caffeine cache lookup + Redirect to original URL - Core URL shortener flow*
 
 ### Demo 8 – Browser - GET /health - UP - Health Check
-![Demo8 Health](screenshots/demo8-health.png)
+![Demo8 Health](screenshots/demo8.png)
 
 *GET http://localhost:8096/health - Browser - 200 OK - Returns {"project":"94-url-shortener-scale","status":"UP"} - Proof of Health Endpoint - Tier 10 Health Check - Same as Project 93 health*
 
 ### Demo 9 – Eclipse JUnit - Green Bar - 2/2 Tests Passed - UrlShortenerServiceTest
-![Demo9 JUnit Green](screenshots/demo9-junit-green.png)
+![Demo9 JUnit Green](screenshots/demo9.png)
 
 *Eclipse JUnit - Finished after 0.483 seconds - Runs: 2/2 - Errors: 0 - Failures: 0 - Green Bar - UrlShortenerServiceTest [Runner: JUnit 5] (0.083 s) - Proof of Tier 10 Testing Goal - JUnit + Mockito - Same as Project 93*
 
 ### Demo 10 – Eclipse Console - JUnit Console Logs - Base62 Encode + Short Code
-![Demo10 JUnit Console](screenshots/demo10-junit-console.png)
+![Demo10 JUnit Console](screenshots/demo10.png)
 
 *Eclipse Console - <terminated> UrlShortenerServiceTest [JUnit] - Base62 Encode Test Passed: 62 -> ba - Short Code Test Passed: Zg1kh8 - Proof of Test Output - Base62 encoding logic verified - Short code generation alphanumeric 6 chars - Console logs same as Project 93 RateLimitServiceTest*
 
 ### Demo 11 – Render Dashboard - Deploy Succeeded Live - 2m32s - Your Service is Live
-![Demo11 Deploy Live](screenshots/demo11-deploy-live.png)
+![Demo11 Deploy Live](screenshots/demo11.png)
 
 *Render Dashboard - WEB SERVICE 94-url-shortener-scale Docker Free - STATUS Deploy succeeded Live Green Tick - DURATION 2m32s - DEPLOYED Oct 28, 2026 at 3:40:37 PM GMT+5:30 - TRIGGER Auto-Deploy - SOURCE eb57a8c - Logs: Oct 28 03:43:06 PM Tomcat started on port 10000 (http) with context path '' - 03:43:07 PM Started Application in 92.497 seconds (process running for 102.804) - 03:43:09 PM ==> Your service is live 🎉 - ==> Available at your primary URL https://nine4-url-shortener-scale.onrender.com - Proof of Production Deployment - Multi-Stage Dockerfile Fixed - Live on Internet - Same as Project 93 Live - Tier 10 SCALE 94/102*
 
